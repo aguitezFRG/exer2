@@ -1,8 +1,16 @@
+<!-- 
+  Franc Roger Glason P. Aguitez 
+  2022-01775
+  CMSC 100 - UV2L
+  Exercise 2
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
     <style>
-        .flex-container {
+        /* Main flex container */
+        .flex-container { 
             width: 100%;
             display: flex;
             justify-content: center;
@@ -11,6 +19,7 @@
             margin: 10px;
         }
 
+        /* Flex container for the other website elements */
         .flex-container_contents  {
           display: flex;
           justify-content: space-around;
@@ -19,29 +28,25 @@
           margin: 10px;
         }
 
+        /* Subcontainers for the header and footer */
         .main_container1, .main_container3 {
             height: 20%; /* takes 20% of the viewport height*/
             background-color: #e0e1dd; 
         }
 
+        /* Subcontainer for the body */
         .main_container2 {
             height: 60%; /* This panel will take up 200% of the viewport height */
             background-color: #0d1b2a; 
         }
 
-        .sub_container1 {
-          height: 60%;
-        }
-
-        .sub_container2 {
-          height: 80%;
-        }
-
+        /* General format for text elements*/
         .text {
           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
           font-size: 20px;
         }
 
+        /* General format for paragraph elements */
         p {
           color: #778da9;
           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -50,31 +55,31 @@
           margin-bottom: 10px;
         }
 
-        .logo {
-          height: 5%;
-          width: 4%;
-        }
-
+        /* Format for featured photo */
         .feat_photo {
           object-fit: contain;
           width: 100vh;
           height: 100vh;
         }
 
+        /* Format for previous project photos */
         .prev_proj {
             object-fit: contain;
             width: 100%; 
             height: 100%;
         }
 
+        /* Format for course ID */
         #course {
           margin: 0px;
         }
 
+        /* Format for skill ID */
         #skill {
           font-size: 13px;
         }
 
+        /* Format for autobiography ID */
         #biography {
           text-indent: 50px;
           width: fit-content;
@@ -85,6 +90,7 @@
           font-size: 13px;
         }
 
+        /* Format for unordered list */
         ul {
           list-style-type: circle;
           width: fit-content;
@@ -93,11 +99,10 @@
           text-align: left;
         }
 
+        /* Subformatting for other elements */
         ul li, a {
           color: #5b6b81;
         }
-
-
 
     </style>
 </head>
@@ -106,29 +111,32 @@
   <!-- Container for the contents of the website -->
   <div class="flex-container">  
 
-    <!-- Container for the Logo and Navigation -->
+    <!-- Setting a "checkpoint" to be used in redirecting -->
     <a id="top"></a>
+
+    <!-- Container for the Logo and Navigation -->
     <div class="main_container1">
-      <img class="logo" src="aguitez_cmsc100_logo_ex2.png" alt="walnut">
+      <img style="height: 5%; width: 4%;" src="pics/aguitez_cmsc100_logo_ex2.png" alt="walnut">
       <div class="flex-container_contents">
-        <a class="text" href="#top">Home</a>
+        <!-- Links to different portions of the website -->
+        <a class="text" href="#top">Home</a> 
         <a class="text" href="#projects">Projects</a>
         <a class="text" href="#about">About Me</a>
         <a class="text" href="#contact">Contact Details</a>
       </div>
-    
     </div>
 
     <!-- Container for the Personal Information/Background -->
     <div class="main_container2">
-        <div class="sub_container2">
+        <div style="height: 80%;">
           <p>Featured Photo</p>
-          <img class="feat_photo" src="aguitez_exer2_featuredphoto.jpg" alt="walnut">
+          <img class="feat_photo" src="pics/aguitez_exer2_featuredphoto.jpg" alt="walnut">
         </div>
+        
+        <a id="projects"></a> 
 
-        <a id="projects"></a>
         <!-- Container containing previous projects -->
-        <div class="sub_container1">
+        <div>
           <p>Previous Projects</p>
           <div class="flex-container_contents"> 
             <div>
@@ -155,7 +163,8 @@
         <!-- Container for the Skills and Autobiography -->
         <div class="flex-container_contents">
           <a id="about"></a>
-          <div class="sub_container1" style="width: 50%;">
+          <!-- Equal vertical partition between skills and autobiography -->
+          <div style="width: 50%;">
             <p>Skills</p>
             <ul>
               <li class="text" id="skill">Knowledgeable in various programming languages</li>
@@ -165,7 +174,7 @@
             </ul>
           </div>
 
-          <div class="sub_container1" style="width: 50%;">
+          <div style="width: 50%;">
             <p>Autobiography</p>
             <p id="biography">
               I originally wanted to be a Civil engineer before the COVID-19 pandemic. 
@@ -181,13 +190,15 @@
     <div class="main_container3">
       <a id="contact"></a>
       <div class="flex-container_contents">
-        <div class="sub_container1" style="width: 30%;">
+        <!-- Logo -->
+        <div style="width: 30%;">
           <a href="https://facebook.com/eparji">
-            <img style="height: 30%; width: 30%; margin: 20px;" src="aguitez_cmsc100_logo_ex2.png" alt="walnut">          
+            <img style="height: 30%; width: 30%; margin: 20px;" src="pics/aguitez_cmsc100_logo_ex2.png" alt="walnut">          
           </a>
         </div>
 
-        <div class="sub_container1" style="width: 70%; text-align: left;">
+        <!-- Contact details and other information -->
+        <div style="width: 70%; text-align: left;">
           <ul style="list-style: none;">
             <li class="text" id="skill">San Pablo City, Laguna</li>
             <li class="text" id="skill">0928-641-1153</li>
@@ -204,10 +215,8 @@
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
-    
 </body>
 </html>
