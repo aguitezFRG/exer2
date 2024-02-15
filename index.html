@@ -11,7 +11,7 @@
             margin: 10px;
         }
 
-        .flex-container_skill-bio, .flex-container_prev_proj  {
+        .flex-container_contents  {
           display: flex;
           justify-content: space-around;
           flex-direction: row;
@@ -48,11 +48,6 @@
           font-size: 30px;
           margin-top: 30px;
           margin-bottom: 10px;
-        }
-
-        div {
-          outline-style: solid;
-          outline-color: aquamarine;
         }
 
         .logo {
@@ -98,9 +93,11 @@
           text-align: left;
         }
 
-        ul li {
-          color: #778da9;
+        ul li, a {
+          color: #5b6b81;
         }
+
+
 
     </style>
 </head>
@@ -110,9 +107,16 @@
   <div class="flex-container">  
 
     <!-- Container for the Logo and Navigation -->
+    <a id="top"></a>
     <div class="main_container1">
       <img class="logo" src="aguitez_cmsc100_logo_ex2.png" alt="walnut">
-      <p style="margin: 0; color: black;">Logo and Navigation Bar</p>
+      <div class="flex-container_contents">
+        <a class="text" href="#top">Home</a>
+        <a class="text" href="#projects">Projects</a>
+        <a class="text" href="#about">About Me</a>
+        <a class="text" href="#contact">Contact Details</a>
+      </div>
+    
     </div>
 
     <!-- Container for the Personal Information/Background -->
@@ -122,28 +126,35 @@
           <img class="feat_photo" src="aguitez_exer2_featuredphoto.jpg" alt="walnut">
         </div>
 
+        <a id="projects"></a>
         <!-- Container containing previous projects -->
         <div class="sub_container1">
           <p>Previous Projects</p>
-          
-          <div class="flex-container_prev_proj"> 
+          <div class="flex-container_contents"> 
             <div>
+              <a href="https://drive.google.com/drive/folders/1FmehB0-yM4Qv8UHNNWdhIr7YScqTWt_n?usp=sharing">
                 <img class="prev_proj" src="pics/prevproj_CSMC12.png" alt="CMSC12">
                 <p class="text" id="course">CMSC12</p>
+              </a>
             </div>
             <div>
+              <a href="https://drive.google.com/drive/folders/1XeUtQcp-HUiTLwlm5Hg-EUfzIpjnM2Df?usp=sharing">
                 <img class="prev_proj" src="pics/prevproj_CMSC150.png" alt="CMSC150">
                 <p class="text" id="course">CMSC150</p>
+              </a>
             </div>
             <div>
+              <a href="https://github.com/eparji/22-MINI-PROJ.git">
                 <img class="prev_proj" src="pics/prevproj_CMSC22.png" alt="CMSC22">
                 <p class="text" id="course">CMSC22</p>
+              </a>
             </div>
           </div>  
         </div>
 
         <!-- Container for the Skills and Autobiography -->
-        <div class="flex-container_skill-bio">
+        <div class="flex-container_contents">
+          <a id="about"></a>
           <div class="sub_container1" style="width: 50%;">
             <p>Skills</p>
             <ul>
@@ -168,7 +179,33 @@
 
     <!-- Container for Footer -->
     <div class="main_container3">
-        <p class="text">This is Panel 3</p>
+      <a id="contact"></a>
+      <div class="flex-container_contents">
+        <div class="sub_container1" style="width: 30%;">
+          <a href="https://facebook.com/eparji">
+            <img style="height: 30%; width: 30%; margin: 20px;" src="aguitez_cmsc100_logo_ex2.png" alt="walnut">          
+          </a>
+        </div>
+
+        <div class="sub_container1" style="width: 70%; text-align: left;">
+          <ul style="list-style: none;">
+            <li class="text" id="skill">San Pablo City, Laguna</li>
+            <li class="text" id="skill">0928-641-1153</li>
+            <li class="text" id="skill">
+              <a href="https://aguitezfrg.github.io/exer2/">
+              Visit my website!
+              </a>
+            </li>
+            <li class="text" id="skill" style="font-style: italic;">All resources used in this website belong to their rightful owners</li>
+            <li class="text" id="skill">
+              <a href="#top">
+              Back to top
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </div>
     
