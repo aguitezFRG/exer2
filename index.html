@@ -3,45 +3,52 @@
 <head>
     <style>
         .flex-container {
-            width: 100vw;
+            width: 100%;
             display: flex;
             justify-content: center;
             text-align: center;
             flex-direction: column;
+            margin: 10px;
         }
 
-        .flex-container2 {
+        .flex-container_skill-bio, .flex-container_prev_proj  {
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
+          flex-direction: row;
+          align-items: center;
+          margin: 10px;
         }
 
         .main_container1, .main_container3 {
-            height: 20vh; /* takes 20% of the viewport height*/
+            height: 20%; /* takes 20% of the viewport height*/
             background-color: #e0e1dd; 
         }
 
         .main_container2 {
-            height: 200vh; /* This panel will take up 200% of the viewport height */
+            height: 60%; /* This panel will take up 200% of the viewport height */
             background-color: #0d1b2a; 
         }
 
         .sub_container1 {
-          height: 60vh;
+          height: 60%;
         }
 
         .sub_container2 {
-          height: 80vh;
+          height: 80%;
         }
 
         .text {
           font-family: 'Franklin Gothic Medium', sans-serif;
+          font-size: 20px;
+          margin-bottom: 0px;
         }
 
         p {
           color: #778da9;
-          font-family: 'Franklin Gothic Medium', sans-serif;
-          font-size: 20px;
-          margin-top: 20px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-size: 30px;
+          margin-top: 30px;
+          margin-bottom: 10px;
         }
 
         div {
@@ -50,13 +57,24 @@
         }
 
         .logo {
-          height: 5vw;
-          width: 4vw;
+          height: 5%;
+          width: 4%;
         }
 
         .feat_photo {
-          height: 32vw;
-          width: 28vw;
+          object-fit: contain;
+          width: 100vh;
+          height: 100vh;
+        }
+
+        .prev_proj {
+            object-fit: contain;
+            width: 100%; 
+            height: 100%;
+        }
+
+        #course {
+          margin: 0px;
         }
 
 
@@ -70,28 +88,44 @@
     <!-- Container for the Logo and Navigation -->
     <div class="main_container1">
       <img class="logo" src="aguitez_cmsc100_logo_ex2.png" alt="walnut">
-      <h1 style="margin: 0;" class="text">Logo and Navigation Bar</h1>
+      <p style="margin: 0; color: black;">Logo and Navigation Bar</p>
     </div>
 
     <!-- Container for the Personal Information/Background -->
     <div class="main_container2">
         <div class="sub_container2">
-          <p class="text">Featured Photo</p>
+          <p>Featured Photo</p>
           <img class="feat_photo" src="aguitez_exer2_featuredphoto.jpg" alt="walnut">
         </div>
 
+        <!-- Container containing previous projects -->
         <div class="sub_container1">
-          <p class="text">Previous Projects</p>
+          <p>Previous Projects</p>
+          
+          <div class="flex-container_prev_proj"> 
+            <div>
+                <img class="prev_proj" src="pics/prevproj_CSMC12.png" alt="CMSC12">
+                <p class="text" id="course">CMSC12</p>
+            </div>
+            <div>
+                <img class="prev_proj" src="pics/prevproj_CMSC150.png" alt="CMSC150">
+                <p class="text" id="course">CMSC150</p>
+            </div>
+            <div>
+                <img class="prev_proj" src="pics/prevproj_CMSC22.png" alt="CMSC22">
+                <p class="text" id="course">CMSC22</p>
+            </div>
+          </div>  
         </div>
 
         <!-- Container for the Skills and Autobiography -->
-        <div class="flex-container2">
+        <div class="flex-container_skill-bio">
           <div class="sub_container1" style="width: 50vw;">
-            <p class="text">Skills</p>
+            <p>Skills</p>
           </div>
 
           <div class="sub_container1" style="width: 50vw;">
-            <p class="text">Autobiography</p>
+            <p>Autobiography</p>
           </div>
 
         </div>
