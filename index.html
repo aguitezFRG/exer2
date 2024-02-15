@@ -1,46 +1,94 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <title>Sample Web Page</title>
-
+<head>
     <style>
         .flex-container {
-            height: 300px;
+            width: 100vw;
             display: flex;
-            border-style: solid;
-            border-width: 3px;
-            border-color: black;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            align-content: flex-end;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
         }
 
-        .flex-item {
-            width: 100px;
-            height: 100px;
-            border-style: solid;
-            border-width: 2px;
-            border-color: green;
+        .flex-container2 {
+          display: flex;
+          justify-content: space-between;
         }
+
+        .main_container1, .main_container3 {
+            height: 20vh; /* takes 20% of the viewport height*/
+            background-color: #e0e1dd; 
+        }
+
+        .main_container2 {
+            height: 200vh; /* This panel will take up 200% of the viewport height */
+            background-color: #0d1b2a; 
+        }
+
+        .sub_container1 {
+          height: 60vh;
+        }
+
+        .sub_container2 {
+          height: 80vh;
+        }
+
+        .text {
+          font-family: 'Franklin Gothic Medium', sans-serif;
+        }
+
+        p {
+          color: #778da9;
+          font-family: 'Franklin Gothic Medium', sans-serif;
+        }
+
+        div {
+          outline-style: solid;
+          outline-color: aquamarine;
+        }
+
 
     </style>
+</head>
 
-  </head>
+<body>
+  <!-- Container for the contents of the website -->
+  <div class="flex-container">  
 
-  <body>
-    <div class="flex-container">
-        <div class="flex-item">1</div>
-        <div class="flex-item" style="flex: 2;">2</div>
-        <div class="flex-item" style="order: 3; flex: 3;">3</div>
-        <div class="flex-item">4</div>
-        <div class="flex-item">5</div>
+    <!-- Container for the Logo and Navigation -->
+    <div class="main_container1">
+      <h1 class="text"> &larr; &rarr; </h1>
+      <h1 class="text">Logo and Navigation Bar</h1>
     </div>
+
+    <!-- Container for the Personal Information/Background -->
+    <div class="main_container2">
+        <div class="sub_container2">
+          <p class="text">Featured Photo</p>
+        </div>
+
+        <div class="sub_container1">
+          <p class="text">Previous Projects</p>
+        </div>
+
+        <!-- Container for the Skills and Autobiography -->
+        <div class="flex-container2">
+          <div class="sub_container1" style="width: 50vw;">
+            <p class="text">Skills</p>
+          </div>
+
+          <div class="sub_container1" style="width: 50vw;">
+            <p class="text">Autobiography</p>
+          </div>
+
+        </div>
+    </div>
+
+    <!-- Container for Footer -->
+    <div class="main_container3">
+        <p class="text">This is Panel 3</p>
+    </div>
+  </div>
     
-  </body>
-
+</body>
 </html>
-
-
